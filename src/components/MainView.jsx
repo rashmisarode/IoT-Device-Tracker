@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import CustomNavBar from './NavBar';
+import DatePickers from './DatePickers';
 
 
 class MainView extends PureComponent {
@@ -11,10 +12,13 @@ class MainView extends PureComponent {
         }
     }
 
+    
+
     render() {
         return (
             <div>
                 <CustomNavBar/>
+                <DatePickers/>
             
             </div>
         )
