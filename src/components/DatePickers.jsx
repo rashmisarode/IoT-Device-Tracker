@@ -2,6 +2,7 @@ import React, { useState }  from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Container, Button, Grid } from '@material-ui/core';
+import { dataService } from '../services/dataService';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -15,15 +16,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DatePickers() {
+export default function DatePickers({callbackSetData}) {
   const classes = useStyles();
 
-  const [fromDate, setFromDate] = useState("2019-10-01");
-  const [toDate, setToDate] = useState("2019-10-01");
+  const [fromDate, setFromDate] = useState("2020-10-01");
+  const [toDate, setToDate] = useState("2020-10-04");
 
 
   const onSubmit = (event) => {
-    console.log(fromDate, toDate);
+    dataService.getdbData(Date.parse(fromDate), Date.parse(toDate)).then(res=> {
+      console.log(res);
+      callbackSetData(res);
+    }).catch(err=> {
+      console.log(err);
+      callbackSetData([]);
+    })
 
   }
 

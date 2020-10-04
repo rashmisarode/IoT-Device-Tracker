@@ -4,6 +4,7 @@ import DatePickers from './DatePickers';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Chart from './Chart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,9 +21,27 @@ class MainView extends PureComponent {
         super(props)
 
         this.state = {
-
+            data: []
         }
+        this.setData = this.setData.bind(this)
     }
+
+    componentDidMount() {
+    }
+
+    setData(webData) {
+        let chartArray = [];
+        webData.forEach(element => {
+            let tempArray = [];
+            tempArray.push(element.time);
+            tempArray.push(element.cpuTemp);
+            chartArray.push(tempArray);
+        });
+        console.log(`ChartArray: ${chartArray}`)
+        this.setState({data: chartArray})
+
+    }
+
 
     render() {
         const classes = this.props.classes;
@@ -32,12 +51,12 @@ class MainView extends PureComponent {
                 <div className={classes.root}>
                     <Grid container spacing={3} style={{ padding: 20 }} justify="center">
                         <Grid item xs={6} style={{ padding: 20 }} >
-                            <Paper className={classes.paper}><DatePickers /></Paper>
+                            <Paper className={classes.paper}><DatePickers callbackSetData={this.setData}/></Paper>
                         </Grid>
                     </Grid>
                     <Grid container spacing={3} style={{ padding: 20 }} justify="center">
                         <Grid item xs={12}>
-                            <Paper className={classes.paper}>xs=12</Paper>
+                            <Paper className={classes.paper}><Chart chartData={this.state.data}/></Paper>
                         </Grid>
                     </Grid>
                 </div>
