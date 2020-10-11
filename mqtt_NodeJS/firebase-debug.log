@@ -1,0 +1,65 @@
+[debug] [2020-09-29T07:29:11.377Z] ----------------------------------------------------------------------
+[debug] [2020-09-29T07:29:11.379Z] Command:       /usr/local/bin/firebase /home/rashmisarode/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init firestore
+[debug] [2020-09-29T07:29:11.379Z] CLI Version:   8.11.2
+[debug] [2020-09-29T07:29:11.379Z] Platform:      linux
+[debug] [2020-09-29T07:29:11.379Z] Node Version:  v10.21.0
+[debug] [2020-09-29T07:29:11.379Z] Time:          Tue Sep 29 2020 00:29:11 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-09-29T07:29:11.379Z] ----------------------------------------------------------------------
+[debug] [2020-09-29T07:29:11.379Z] 
+[debug] [2020-09-29T07:29:11.383Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-29T07:29:11.383Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/rashmisarode/git/nodejs-docs-samples/iot/mqtt_example
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2020-09-29T07:29:52.545Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"firebase-iot-project","name":"firebase-iot-project"}
+[debug] [2020-09-29T07:29:53.035Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Sep 2020 07:29:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=291","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-29T07:29:53.040Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6555879161531753807  
+ 
+[debug] [2020-09-29T07:29:53.552Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Sep 2020 07:29:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=331","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-29T07:29:54.057Z] [Project Creation Poller] Retrying task index 0
+[debug] [2020-09-29T07:29:54.059Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6555879161531753807  
+ 
+[debug] [2020-09-29T07:29:54.469Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Sep 2020 07:29:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=321","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-29T07:29:55.471Z] [Project Creation Poller] Retrying task index 0
+[debug] [2020-09-29T07:29:55.472Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6555879161531753807  
+ 
+[debug] [2020-09-29T07:29:56.009Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Sep 2020 07:29:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=367","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-29T07:29:56.017Z] >>> HTTP REQUEST POST https://firebase.googleapis.com/v1beta1/projects/firebase-iot-project:addFirebase  
+ 
+[debug] [2020-09-29T07:29:56.623Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 29 Sep 2020 07:29:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-29T07:29:56.623Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-09-29T07:29:56.629Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-09-29T07:29:56.794Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/home/rashmisarode/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/rashmisarode/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/api.js:41:35)
+    at Request.self.callback (/home/rashmisarode/.cache/firebase/tools/lib/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at Request.<anonymous> (/home/rashmisarode/.cache/firebase/tools/lib/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at Request.EventEmitter.emit (domain.js:448:20)
+    at IncomingMessage.<anonymous> (/home/rashmisarode/.cache/firebase/tools/lib/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
